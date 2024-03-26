@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masiza Expect Teacher/Tutor Application Form</title>
+  <style>
+    /* You can add your own styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 20px;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #52ace0;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow:  0 0 10px black;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="submit_teacher_application.php" method="POST">
+
+    <h2>Teacher Tutor Application Form</h2>
+    <label for="teacher_or_tutor">Teacher or Tutor ?</label>
+    <select id="teacher_or_tutor" name="teacher_or_tutor" required>
+        <option value="new">Tutor</option>
+        <option value="renewal">Teacher</option>
+    </select>
+    <!-- Personal Information Section -->
+    <h3>Personal Information</h3>
+    <label for="fisrt_name" >First names:</label>
+    <input type="text" id="first_name" name="first_name" required>
+
+    <label for="last_name" >Last name:</label>
+    <input type="text" id="last_name" name="last_name" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+    
+
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+
+    <!-- Educational Background Section -->
+    <h3>Educational Background</h3>
+    <label for="qualification">Highest Qualification:</label>
+    <input type="text" id="qualification" name="qualification" required>
+
+    <label for="specialization">Subject Specialization:</label>
+    <input type="text" id="specialization" name="specialization" required>
+
+    <!-- Department and Division Section -->
+    <h3>Department and Division Preference</h3>
+    <label for="department">Department:</label>
+    <select id="department" name="department" required>
+      <option value="DESAT">Department of Education, Science, Agriculture and Technology</option>
+      <option value="DSSACE">Department of Social Development, Sports, Arts, Culture and Events</option>
+    </select>
+
+    <label for="division">Division:</label>
+    <input type="text" id="division" name="division" required>
+
+    <!-- Contact Information Section -->
+    <h3>Contact Information</h3>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit Application</button>
+  </form>
+
+</body>
+</html>

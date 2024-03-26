@@ -1,0 +1,15 @@
+html {
+    scroll-behavior: smooth;
+    font-family: Helvetica, sans-serif, Arial;
+}
+
+body {
+
+        margin: 0 auto;
+        background-color: rgb(166, 160, 160);
+        background-image: url('img.png');
+        background-size: cover;
+    
+    }
+    
+    

@@ -1,0 +1,261 @@
+<!-- 
+**************************Author****************************
+Surname : Nyakama
+Name    : Mahle 
+Date    : 04/01/2034
+published: ++++++
+***************************contact***************************
+0722592916/0720938207
+************************************************************
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masiza Expect</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --transition: all 300ms ease-in-out;
+    --dark-color: #332e29;
+    --light-color: #fff;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+button, .btn{
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--dark-color);
+}
+img{
+    width: 100%; 
+    display: block;
+}
+container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.vh-100{
+    min-height: 100vh;
+}
+h2{
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: 0;  
+    line-height : 1.3; 
+    margin-bottom: 2rem;
+    color: 0 0 10px rgb(244, 246, 248);
+    text-shadow: 0 0 10px rgb(0, 109, 128);
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.py-7{
+    padding: 7rem 0;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+.lead{
+    opacity: 0.8;
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* button down and title -reusable */
+.btn-down{
+    font-size: 3rem;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+.btn-down:hover{
+    opacity: 0.8;
+    transform: translateY(5px);
+}
+.btn-down-white{
+    color: var(--light-color);
+}
+.title{
+    margin-bottom: 5rem;
+}
+.title h2{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    position: relative;
+}
+.title h2::after{
+    position: absolute;
+    content: "";
+    top: 120%;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background-color: var(--dark-color);
+}
+
+/* artist-statement */
+#artist-statement{
+    background: rgb(9, 9, 70);
+    color: var(--light-color);
+    padding-left: 4px;
+}
+#artist-statement .title h2, #artist-statement h3{
+    color: var(--light-color);
+}
+#artist-statement .title h2::after{
+    background: var(--light-color);
+}
+.artist-statement-bottom{
+    margin-top: 4rem;
+    text-align: center;
+}
+.artist-statement-bottom > div .icon img{
+    width: 50px;
+    margin: 0 auto 1.7rem auto;
+}
+
+/* Media Queries */
+
+@media(min-width: 450px){
+    .artist-statement-bottom{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        row-gap: 0;
+    }
+   
+}
+@media(min-width: 576px){
+    .title h2{
+        font-size: 4rem;
+    }
+    .artist-statement-bottom{
+        grid-template-columns: repeat(4, 1fr);
+    }
+   
+    .footer-content ul{
+        flex-direction: row;
+    }
+  
+}
+
+@media(min-width: 768px){
+    .header-content h1{
+        font-size: 7rem;
+    }
+    .about-content, .artist-statement-top{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 6rem;
+        row-gap: 0;
+    }
+
+  
+}
+
+    @media only screen and (max-width: 700px) {
+        /* For mobile phones: */
+        .menu, .main, .right {
+          max-width:100%;
+      
+        }
+        h1{
+            font-size: 24rem;
+            font-weight: bolder;
+            margin-top: 0;  
+            line-height : 1.3; 
+            margin-bottom: 2rem;
+            color: var(--dark-color);
+            text-shadow: 0 0 10px plum;
+        }
+
+        .container{
+            align-content:stretch;
+        }
+    
+
+  }
+    </style>
+</head>
+<body>
+    <!-- main content -->
+    <main>
+       
+        <!-- end of about section -->
+
+        <!-- artist-statement section -->
+        <section id = "artist-statement" class = "vh-100 flex py-7">
+            <div class = "container">
+                <div class = "artist-statement-content">
+                    <div class = "title">
+                        <h2>VISION and MISSION STATEMENT</h2>
+                    </div>
+                    <ul class = "artist-statement-top grid">
+                        <li class = "lead"><i class = "fas fa-dot-circle"></i> 
+                            <b>VISION </b><br>
+                            To be the leading and excellent organization in teaching and inspiring the students, 
+                            thus helping our community and local schools to improve in their pass rate every
+                            year.
+                            The Organization's logo symbolizes academic solutions in Education, Sports, 
+                            Arts and culture, within the logo is the motto: “unlocking your dreams” which 
+                            emphasizes the Organization’s abilities to strive to propel students forward, so 
+                            that they can achieve their dreams.
+                  
+                        </li>
+                    
+                        <li class = "lead"><i class = "fas fa-dot-circle"></i>
+                            <b>MISSION</b><br>
+                            The Organisation's Mission is to achieve its vision by offering quality education,
+                            promoting fortitude in the youth to be more active in Academics, sports, Arts, 
+                            Health,Science and Technology acting as coordinating tutors and mentors to
+                            students and illustrating excellence in school performance. This will be achieved by
+                            forming partnership with relevant stakeholders and making use of committed
+                            human capital though using appropriate physical and fiscal resources.
+ 
+                    </ul>
+                    <a href = "index.html" class = "btn-down btn-down-white">
+                        <i class = "fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+</body>
+</html>
