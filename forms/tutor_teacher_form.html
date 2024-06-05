@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masiza Expect Teacher/Tutor Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #52ace0;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 0 10px black;
+            display: block;
+            margin-top: 12px;
+            text-shadow: 0 0 10px greenyellow;
+        }
+    </style>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <form onsubmit="emailSend(event)">
+        <h2>Teacher/Tutor Application Form</h2>
+        <label for="teacher_or_tutor">Teacher or Tutor?</label>
+        <select id="teacher_or_tutor" name="teacher_or_tutor" required>
+            <option value="tutor">Tutor</option>
+            <option value="teacher">Teacher</option>
+        </select>
+
+        <!-- Personal Information Section -->
+        <h3>Personal Information</h3>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <!-- Educational Background Section -->
+        <h3>Educational Background</h3>
+        <label for="qualification">Highest Qualification:</label>
+        <input type="text" id="qualification" name="qualification" required>
+
+        <label for="specialization">Subject Specialization:</label>
+        <input type="text" id="specialization" name="specialization" required>
+
+        <!-- Department and Division Section -->
+        <h3>Department and Division Preference</h3>
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+            <option value="DESAT">Department of Education, Science, Agriculture and Technology</option>
+            <option value="DSSACE">Department of Social Development, Sports, Arts, Culture and Events</option>
+        </select>
+
+        <label for="division">Division:</label>
+        <input type="text" id="division" name="division" required>
+
+        <!-- Contact Information Section -->
+        <h3>Contact Information</h3>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Application</button>
+    </form>
+
+    <script>
+        function emailSend(event) {
+            event.preventDefault();
+            var teacherOrTutor = document.getElementById('teacher_or_tutor').value;
+            var firstName = document.getElementById('first_name').value;
+            var lastName = document.getElementById('last_name').value;
+            var dob = document.getElementById('dob').value;
+            var gender = document.getElementById('gender').value;
+            var qualification = document.getElementById('qualification').value;
+            var specialization = document.getElementById('specialization').value;
+            var department = document.getElementById('department').value;
+            var division = document.getElementById('division').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+
+            var messageBody = "Teacher or Tutor: " + teacherOrTutor +
+                "<br/> First Name: " + firstName +
+                "<br/> Last Name: " + lastName +
+                "<br/> Date of Birth: " + dob +
+                "<br/> Gender: " + gender +
+                "<br/> Highest Qualification: " + qualification +
+                "<br/> Subject Specialization: " + specialization +
+                "<br/> Department: " + department +
+                "<br/> Division: " + division +
+                "<br/> Email: " + email +
+                "<br/> Phone: " + phone;
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "host@gmail.com",
+                Password: "Password",
+                To: 'Chairperson.masizaexpect@gmail.com',
+                From: "website@gmail.com",
+                Subject: "Teacher/Tutor Application Form Submission",
+                Body: messageBody
+            }).then(
+                message => {
+                    if (message == 'OK') {
+                        swal("Successful", "Your form has been submitted!", "success");
+                    } else {
+                        swal("Error", "There was an error submitting your form.", "error");
+                    }
+                }
+            );
+        }
+    </script>
+</body>
+</html>

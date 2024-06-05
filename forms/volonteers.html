@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3aa6c7;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin-top: 12px;
+            text-shadow: 0 0 10px greenyellow;
+            box-shadow: 0 0 10px black;
+        }
+    </style>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <h2>Volunteer Application Form</h2>
+    <form onsubmit="emailSend(event)">
+        <!-- Personal Information -->
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <!-- Address Information -->
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+
+        <!-- Volunteer Preferences -->
+        <label for="areasOfInterest">Areas of Interest:</label>
+        <input type="text" id="areasOfInterest" name="areasOfInterest" required>
+
+        <label for="availability">Availability:</label>
+        <textarea id="availability" name="availability" rows="3" required></textarea>
+
+        <!-- Additional Information (Optional) -->
+        <label for="additionalComments">Additional Comments:</label>
+        <textarea id="additionalComments" name="additionalComments" rows="3"></textarea>
+
+        <button type="submit">Submit Application</button>
+    </form>
+
+    <script>
+        function emailSend(event) {
+            event.preventDefault();
+            var firstName = document.getElementById('first_name').value;
+            var lastName = document.getElementById('last_name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var address = document.getElementById('address').value;
+            var areasOfInterest = document.getElementById('areasOfInterest').value;
+            var availability = document.getElementById('availability').value;
+            var additionalComments = document.getElementById('additionalComments').value;
+
+            var messageBody = "First Name: " + firstName +
+                "<br/> Last Name: " + lastName +
+                "<br/> Email: " + email +
+                "<br/> Phone: " + phone +
+                "<br/> Address: " + address +
+                "<br/> Areas of Interest: " + areasOfInterest +
+                "<br/> Availability: " + availability +
+                "<br/> Additional Comments: " + additionalComments;
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "host@gmail.com",
+                Password: "Password",
+                To: 'Chairperson.masizaexpect@gmail.com',
+                From: "website@gmail.com",
+                Subject: "Volunteer Application Form Submission",
+                Body: messageBody
+            }).then(
+                message => {
+                    if (message == 'OK') {
+                        swal("Successful", "Your form has been submitted!", "success");
+                    } else {
+                        swal("Error", "There was an error submitting your form.", "error");
+                    }
+                }
+            );
+        }
+    </script>
+</body>
+</html>
+

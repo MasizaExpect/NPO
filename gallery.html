@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<!-- Design by foolishdeveloper.com -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Masiza Expect</title>
+  <style media="screen">
+ /* button down and title -reusable */
+.btn-down{
+    font-size: 3rem;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+.btn-down:hover{
+    opacity: 0.8;
+    transform: translateY(5px);
+}
+.btn-down-white{
+    color: rgb(99, 99, 218);
+}
+
+#gallery{
+  background: linear-gradient(rgba(251, 252, 253,), rgb(15, 105, 165)), url('images/') center/cover no-repeat fixed;
+  column-count:4;
+  column-gap:20px;
+}
+    
+#gallery img {
+  width:100%;
+  height:auto;
+  margin: 4% auto;
+  box-shadow:-3px 5px 15px #0414a0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+    
+@media (max-width:1200px){
+  #gallery{
+
+  column-count:3;
+
+  column-gap:20px;
+}
+}
+@media (max-width:800px){
+  #gallery{
+
+  column-count:2;
+
+  column-gap:20px;
+}
+}
+@media (max-width:600px){
+  #gallery{
+
+  column-count:1;
+}
+}
+
+
+
+
+  </style>
+</head>
+<body>
+ 
+<div id="gallery" class="container-fluid">
+  <img src="img/img5.jpg" class="img-responsive">
+  <img src="img/img3.jpg" class="img-responsive">
+  <img src="img/img1.jpg" class="img-responsive">
+  <img src="img/img2.jpg"class="img-responsive">
+  <img src="img/img4.jpg" class="img-responsive">
+  
+  <img src="img/img6.jpg" class="img-responsive">
+  <img src="img/img7.png" class="img-responsive">
+  <img src="img/sport.png" class="img-responsive">
+</div>
+
+<a href = "index.html" class = "btn-down btn-down-white">
+  <i class = "fas fa-chevron-down"></i>
+</a>
+
+</body>
+</html>

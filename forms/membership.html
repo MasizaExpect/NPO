@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Registration and Renewal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 50px;
+            width: 100%;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #7ccff5;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin-top: 12px;
+            text-shadow: 0 0 10px greenyellow;
+            box-shadow: 0 0 10px black;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Membership Registration and Renewal Form</h2>
+    
+    <form onsubmit="emailSend(event)">
+        <!-- Personal Information -->
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required>
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <!-- Membership Information -->
+        <label for="membershipType">Membership Type:</label>
+        <select id="membershipType" name="membershipType" required>
+            <option value="new">New Membership</option>
+            <option value="renewal">Renewal</option>
+        </select>
+
+        <label for="membershipDuration">Membership Duration:</label>
+        <select id="membershipDuration" name="membershipDuration" required>
+            <option value="1">1 Year</option>
+            <option value="2">2 Years</option>
+            <option value="3">3 Years</option>
+        </select>
+
+        <!-- Additional Information (Optional) -->
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function emailSend(event) {
+            event.preventDefault();
+            
+            var firstname = document.getElementById('firstname').value;
+            var lastname = document.getElementById('lastname').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var membershipType = document.getElementById('membershipType').value;
+            var membershipDuration = document.getElementById('membershipDuration').value;
+            var comments = document.getElementById('comments').value;
+
+            var messageBody = "First Name: " + firstname +
+                "<br/> Last Name: " + lastname +
+                "<br/> Email: " + email +
+                "<br/> Phone: " + phone +
+                "<br/> Membership Type: " + membershipType +
+                "<br/> Membership Duration: " + membershipDuration +
+                "<br/> Comments: " + comments;
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "host@gmail.com",
+                Password: "Password",
+                To: 'Chairperson.masizaexpect@gmail.com',
+                From: "website@gmail.com",
+                Subject: "Membership Registration and Renewal Form Submission",
+                Body: messageBody
+            }).then(
+                message => {
+                    if (message === 'OK') {
+                        swal("Successful", "Your form has been submitted!", "success");
+                    } else {
+                        swal("Error", "There was an error submitting your form.", "error");
+                    }
+                }
+            );
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,238 @@
+<!-- 
+Developer : Nyakama Mahle
+Date : 16/01/2024
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masiza Expect</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css
+    ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-OLiP9z1Z83Cx2z1h0Zo5OLVQzIhccf3V95bP1Z5KwXStqu2QlOzCq4qO8YZcHVbp" crossorigin="anonymous">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/styles.css">
+  
+</head>
+
+<body>
+
+    <header>
+
+        <div class="container-fluid">
+             
+            <div class="navb-logo">
+                <img src="img/logo.jpg" alt="Logo">
+            </div>
+             
+            <div class="navb-items d-none d-xl-flex">
+
+                <div class="item">
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">&#155; links</button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="forms/membership.html">Membership Registration </a>
+                          <a href="forms/volonteers.html">Volunteers Application </a>
+                          <a href="forms/learners_application_form.html">Learners Application </a>
+                          <a href="forms/tutor_teacher_form.html">Teacher / Tutor  Application </a>
+                          <a href="requirements.html">Requirements!! </a>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="item-button">
+                    <a href="#artist-statement" on-submit type="button"><i class="fa fa-dot-circle"></i> VISION & MISSION</a>
+                </div>
+                <div class="item">
+                    <a href="gallery.html"><i class="fa fa-image">GALLERY</i></a>
+                </div>
+                <div class="item">
+                    <a href="#about"> <i class="fa fa-info-circle">ABOUT US</i></a>
+                </div>
+
+                <div class="item-button">
+                    <a href="contact.html" on-submit type="button"><i class="fa fa-envelope"></i>CONTACT US</a>
+                </div>
+            </div>
+        
+            <!-- Button trigger modal -->
+            <div class="mobile-toggler d-lg-none">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#navbModal">menu
+                <i  class="fa fa-bars" alt = "menu"></i> 
+                </a>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="navbModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        
+
+                        <div class="modal-header">
+                            <img src="img/logo.jpg" alt="Logo">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="modal-line">
+                                <i class="fa fa-info-circle"></i><a href="about.html">ABOUT US</a>
+                            </div>
+                            
+                            
+                            <div class="modal-line">
+                                <a href="vision.html" class="btn btn-primary" type="button">
+                                    <i class="fas fa-sign-in-alt"></i> VISION & MISSION
+                                </a>
+                            </div>
+                            
+                            <div class="modal-line">
+                                <a href="gallery.html"><i class="fa fa-image"></i>GALLERY</a>
+                            </div>
+
+                            <div class="modal-line">
+                                <a href="links.html" class="btn btn-primary" type="button">
+                                    <i class="fas fa-link"></i>Links
+                                </a>
+                            </div>
+                            <a href="contact.html" class="navb-button" type="button">CONTACT US</a>
+                        </div>
+                        
+
+                        <div class="mobile-modal-footer">
+
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/masiza_expect_npo?utm_source=qr&igsh=MzNlNGNkZWQ4Mg%3D%3D"><i class="fab fa-brands fa-instagram"></i></a>
+
+                            <a target="_blank" rel="noopener noreferrer"href="#"><i class="fab fa-brands fa-linkedin-in"></i></a>
+
+                            <a target="_blank" rel="noopener noreferrer"href="https://whatsapp.com/channel/0029VaKCWvFJpe8hjxJHCp3U"><i class="fab fa-whatsapp"></i></a>
+
+                            <a target="_blank" rel="noopener noreferrer"href="https://www.facebook.com/profile.php?id=100064801413961&mibextid=LQQJ4d"><i class="fab fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <br><br><br><br>
+    <div class = "body-content">
+        <h2>Masiza Expect NPO :<br><span class = "typewrite" data-loop = "yes" data-speed = "130" data-delay = "2000" data-words = '[" Department of education"," Department of Social Development sports"]'></span></h2>
+        <h3>Masiza Expect</h3>
+    </div>
+    <br>
+    <div class="chat-button">
+        <button class="w3-button " type="submit">
+            <a href="chatBot/chatBot.html"> <span style="color:white ;font-weight: bold;"><i class="fa fa-fw fa-comments-o">       </i>Chat with us! </a></span>
+        </button>
+    </div>
+    <section class="section-1">
+        
+    </section>
+        <!-- about section -->
+        <section id = "about" class = "about py-7">
+            <div class = "container">
+                <div class = "about-content grid">
+                    <div class = "about-left">
+                        <img src = "img/logo.jpg" alt = "">
+                    </div>
+                    <div class = "about-right">
+                        <div class = "title">
+                            <h2>ABOUT US</h2>
+                        </div>
+                        <p class = "lead">
+                            Masiza Expect is registered nonprofit organization under deparment of 
+                            social development South Africa. It Founded in the year 2016. In a 
+                            remote village called Nwaxinyamani under Nkhensani Tribal Council in 
+                            the Limpopo province.it was started with the intension of bouncing 
+                            back to the community.
+                            The Main purposes of this organization is to improving the standard of 
+                            learning through teaching and empowering student.
+                            Our organization is divided into two Departments with each having its 
+                            own sub divisions 1. Department of education, science, agriculture and 
+                            technology ( DESAT) it primary focus is Education, Science and 
+                            Technology, 2.Department Social Development sports, arts ,culture and 
+                            event (DSSACE) it primary focus is Recruitment, Social Development 
+                            and Sports
+                        </p>
+                        <p class = "lead"> </p>
+                        <a href = "#artist-statement" class = "btn-down">
+                            <i class = "fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of about section -->
+
+        <!-- vision and mission -statement section -->
+        <section id = "artist-statement" class = "vh-100 flex py-7">
+            <div class = "container">
+                <div class = "artist-statement-content">
+                    <div class = "title">
+                        <h2>VISION and MISSION STATEMENT</h2>
+                    </div>
+                    <ul class = "artist-statement-top grid">
+                        <li class = "lead"><i class = "fas fa-dot-circle"></i> 
+                            <b>VISION </b><br>
+                            To be the leading and excellent organization in teaching and inspiring the students, 
+                            thus helping our community and local schools to improve in their pass rate every
+                            year.
+                            The Organization's logo symbolizes academic solutions in Education, Sports, 
+                            Arts and culture, within the logo is the motto: “unlocking your dreams” which 
+                            emphasizes the Organization’s abilities to strive to propel students forward, so 
+                            that they can achieve their dreams.
+                  
+                        </li>
+                                                                                                             
+                        <li class = "lead"><i class = "fas fa-dot-circle"></i>
+                            <b>MISSION</b><br>
+                            The Organisation's Mission is to achieve its vision by offering quality education,
+                            promoting fortitude in the youth to be more active in Academics, sports, Arts, 
+                            Health,Science and Technology acting as coordinating tutors and mentors to
+                            students and illustrating excellence in school performance. This will be achieved by
+                            forming partnership with relevant stakeholders and making use of committed
+                            human capital though using appropriate physical and fiscal resources.
+                        </li>
+                    </ul>
+                 
+                    <a href = "gallery.html" class = "btn-down btn-down-white">
+                        <i class = "fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
+        </section>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+        <!-- end of artist-statement section -->
+    <!-- end of main content -->
+    <section class="footer">
+                <!--Footer-->
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/masiza_expect_npo?utm_source=qr&igsh=MzNlNGNkZWQ4Mg%3D%3D"><i class="fab fa-brands fa-instagram"></i></a>
+            
+                    <a target="_blank" rel="noopener noreferrer" href="#"><i class="fab fa-brands fa-linkedin-in"></i></a>
+            
+                    <a target="_blank" rel="noopener noreferrer" href="https://whatsapp.com/channel/0029VaKCWvFJpe8hjxJHCp3U"><i class="fab fa-whatsapp"></i></a>
+            
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=100064801413961&mibextid=LQQJ4d"><i class="fab fa-brands fa-facebook"></i></a>
+                  </div>
+                  <!--end footer--> 
+    </section>
+    <!--dropdown-->
+    <script src="scripts/dropdown.js"></script>
+    <!-- typewriting js -->
+    <script src="scripts/typewriting.min.js"></script>
+    <script src = "scripts/typewriting.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"> </script>
+</body>
+
+</html>

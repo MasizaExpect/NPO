@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Playfair Display', serif;
+    display: grid;
+    background-color: #4158D0;
+    background-image:linear-gradient(43deg, #4158D0 0%, #faf6fa 46%, blue 100%);
+    align-content: center;
+    min-height: 100vh;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 70vh;
+    width: 75vw;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 12px
+}
+.image{
+    background-color: #12192c;
+    display: flex;
+    border-radius: 12px 0 0 12px;
+}
+.image img{
+height:50vh;
+margin:50px auto
+}
+.content{
+    background-color: #12192c;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0  12px 12px 0;
+    color: #fff;
+}
+.content h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+    padding-top:0;
+    margin-top: 0;
+    color: rgb(145, 185, 212);
+}
+.content span{
+    height: 0.5px;
+    width: 80px;
+    background: #777;
+    margin: 30px 0;
+}
+
+.content p{
+    padding-bottom: 15px;
+    font-weight: small;
+    font-size: small;
+    opacity: 0.7;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+    color:#ffffff;
+}
+
+
+/********meadia queuries********/
+
+@media(max-width: 900px){
+    section{
+        grid-template-columns: 1fr;
+        width: 100%;
+        border-radius: none;
+    }
+    .image img{
+        height: auto;
+        width: auto;
+        border-radius: 50%;
+    }
+    .content{
+        height: 100vh;
+        border-radius: none;
+    }
+    .content h2{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .content span{
+        margin: 20px 0;
+    }
+    .content p{
+        font-size: 14px;
+    }
+  .credit{
+    text-align: center;
+    color: #000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .credit a{
+    text-decoration: none;
+    color:#000;
+    font-weight: bold;
+  } 
+
+}
+    </style>
+
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <section>
+        <div class="image">
+            <img src="img/logo.jpg" alt="">
+        </div>
+        
+        <div class="content">
+            <h2>About Us</h2>
+            <span><!-- line here --></span>
+            <p>
+                Masiza Expect is registered nonprofit organization under deparment of 
+                social development South Africa. It Founded in the year 2016. In a 
+                remote village called Nwaxinyamani under Nkhensani Tribal Council in 
+                the Limpopo province.it was started with the intension of bouncing 
+                back to the community.
+                The Main purposes of this organization is to improving the standard of 
+                learning through teaching and empowering student.
+                Our organization is divided into two Departments with each having its 
+                own sub divisions 1. Department of education, science, agriculture and 
+                technology ( DESAT) it primary focus is Education, Science and 
+                Technology, 2.Department Social Development sports, arts ,culture and 
+                event (DSSACE) it primary focus is Recruitment, Social Development 
+                and Sports  
+            </p>
+        </div>
+    </section>
+    <br>
+        <div class="credit">Made with <span style="color:red">❤</span> by <a
+            href="http://www.linkedin.com/in/mahle-nyakama-b96889218">Nyakama Mahle</a>
+        </div>
+</body>
+
+</html>

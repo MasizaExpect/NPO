@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masiza Expect Learners Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        h2, h3 {
+            color: #333;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #2599e6;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px black;
+            display: block;
+            margin-top: 12px;
+            text-shadow: 0 0 10px greenyellow;
+        }
+    </style>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <form onsubmit="emailSend(event)">
+        <h2>Masiza Expect Learners Application Form</h2>
+        <h3>Personal Information</h3>
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" required>
+
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <h3>Contact Information</h3>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <h3>Educational Information</h3>
+        <label for="grade">Current Grade:</label>
+        <input type="text" id="grade" name="grade" required>
+
+        <label for="school">Current School:</label>
+        <input type="text" id="school" name="school" required>
+
+        <h3>Department Preference</h3>
+        <label for="department">Preferred Department:</label>
+        <select id="department" name="department" required>
+            <option value="desat">Department of Education, Science, Agriculture, and Technology (DESAT)</option>
+            <option value="dssace">Department of Social Development, Sports, Arts, Culture, and Event (DSSACE)</option>
+        </select>
+
+        <button type="submit">Submit Application</button>
+    </form>
+
+    <script>
+        function emailSend(event) {
+            event.preventDefault();
+            var firstName = document.getElementById('firstname').value;
+            var lastName = document.getElementById('lastname').value;
+            var dob = document.getElementById('dob').value;
+            var gender = document.getElementById('gender').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var grade = document.getElementById('grade').value;
+            var school = document.getElementById('school').value;
+            var department = document.getElementById('department').value;
+
+            var messageBody = "First Name: " + firstName +
+                "<br/> Last Name: " + lastName +
+                "<br/> Date of Birth: " + dob +
+                "<br/> Gender: " + gender +
+                "<br/> Email: " + email +
+                "<br/> Phone: " + phone +
+                "<br/> Current Grade: " + grade +
+                "<br/> Current School: " + school +
+                "<br/> Preferred Department: " + department;
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "host@gmail.com",
+                Password: "Password",
+                To: 'Chairperson.masizaexpect@gmail.com',
+                From: "website@gmail.com",
+                Subject: "Learners Application Form Submission",
+                Body: messageBody
+            }).then(
+                message => {
+                    if (message == 'OK') {
+                        swal("Successful", "Your form has been submitted!", "success");
+                    } else {
+                        swal("Error", "There was an error submitting your form.", "error");
+                    }
+                }
+            );
+        }
+    </script>
+</body>
+</html>
+
+
